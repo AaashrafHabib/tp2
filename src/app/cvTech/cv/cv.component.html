@@ -1,0 +1,52 @@
+<!-- <div class="row">
+    <div class="col-md-6  col-sm-3">
+        <app-listecv [personnes]="personnes" (selectedPersonne)="selectpersonne($event)" > </app-listecv>
+    </div>
+    <div class="col-md-6 col-sm-9">
+        <app-detailcv [personne]="selectedPersonne"> </app-detailcv>
+    </div>
+
+</div> -->
+
+<!-- <div class="row">
+
+
+    <div class="col md-6" col-sm-3>
+      <ol>
+  
+        <li>
+          <app-listecv (selectedPersonne)="selectpersonne($event)" [personnes]="personnes"></app-listecv>
+        </li>
+  
+        <li>
+          <app-listecv
+            (selectedPersonne)="Selectpersonne($event)"
+            [personnes]="personnes">
+        </app-listecv>
+        </li>
+  
+  
+     </ol>
+    </div>
+  
+  
+    <div class="col md-6 col-sm-9">
+  <app-detailcv
+    *ngIf="selectedpersonne"
+    [personne]="selectedPersonne"> 
+</app-detail>
+    </div>
+  -->
+
+<div class="row">
+    <div class="col-md-6 col-sm-3">
+        <app-listecv (selectedPersonne)="selectPersonne($event)" [personnes]="personnes"></app-listecv>
+    </div>
+    <div class="col-md-6 col-sm-9">
+        <app-detailcv *ngIf="SelectedPesonne" [personne]="SelectedPesonne"></app-detailcv>
+    </div>
+
+</div>
+<div class="row">
+    <app-embauche> </app-embauche>
+</div>

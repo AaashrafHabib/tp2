@@ -1,0 +1,13 @@
+input {
+    border: solid 5px;
+}
+
+#ach {
+    border: 1px black;
+    width: 15px;
+    height: 15px;
+}
+
+input:active {
+    border: 0;
+}
