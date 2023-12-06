@@ -13,7 +13,7 @@ const APP_ROUTING :Routes = [
         {path: 'add', component: AddCvComponent},
         {path: ':id', component: DetailPersonneComponent},
       ] },
-    {path: 'color/:default', component: ColorComponent},
+    {path: 'color', component: ColorComponent},
    {path: '', component: CvComponent}, 
 ]
   

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Personne } from '../Model/Persoone';
-
+import {HttpClient, HttpParams} from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
@@ -21,4 +21,14 @@ private personnes :Personne[];
 
     return this.personnes ; 
   }
+  // deletePersonne(id: number){
+  //   return this.httpClient.delete(this.link+`/${id}`);
+  // } 
+  getPersonneById(id: number):Personne{ 
+    return this.personnes.find(p => p.id == id) || new Personne(); // Utilisez "||" pour renvoyer une nouvelle Personne si aucune personne n'est trouvée.
+  }
+
+
+
 }
+  
